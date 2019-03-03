@@ -4,8 +4,8 @@ export class Usuario {
     pais: String;
     ciudad: String;
     direccion: String;
-    empresa: String;
-    cargo: String;
+    universidad: String;
+    titulo: String;
     correo: String;
     celular: String;
     telefono: String;

@@ -1,20 +1,18 @@
 <div class="contenido">
 
-	<h2 class="titulo">{{titulo}}</h2>
+	<h2 class="titulo">{{tituloForm}}</h2>
 		
 
-	<input [(ngModel)]="miUsuario.nombre" 		type="text"  id="nombre" 	placeholder="Nombre (*)"  #nombre="ngModel" required pattern="[a-zA-Z]+"/>
-	<span class="letraPequena" *ngIf="nombre.touched && !nombre.valid"> <br>El nombre es obligatorio.</span>
-	<br>
-	<input [(ngModel)]="miUsuario.apellido" 	type="text"  id="apellido" 	placeholder="Apellido (*)"><br>
-	<input [(ngModel)]="miUsuario.pais" 		type="text"  id="pais" 		placeholder="País (*)"><br>
-	<input [(ngModel)]="miUsuario.ciudad" 		type="text"  id="ciudad" 	placeholder="Ciudad (*)"><br>
-	<input [(ngModel)]="miUsuario.direccion" 	type="text"  id="direccion" placeholder="Dirección"><br>
-	<input [(ngModel)]="miUsuario.empresa" 		type="text"  id="empresa" 	placeholder="Empresa "><br>
-	<input [(ngModel)]="miUsuario.cargo" 		type="text"  id="cargo" 	placeholder="Cargo (*)"><br>
-	<input [(ngModel)]="miUsuario.correo" 		type="email" id="correo" 	placeholder="Correo (*)"><br>
-	<input [(ngModel)]="miUsuario.celular" 		type="text"  id="celular" 	placeholder="Celular"><br>
-	<input [(ngModel)]="miUsuario.telefono" 	type="text"  id="telefono" 	placeholder="Teléfono"><br>
+	<input [(ngModel)]="miUsuario.nombre" 		type="text"  id="nombre" 	placeholder="Nombre (*)"    #nombre="ngModel" required pattern="[a-zA-Z]+"/><br>
+	<input [(ngModel)]="miUsuario.apellido" 	type="text"  id="apellido" 	placeholder="Apellido (*)"  #apellido="ngModel" required pattern="[a-zA-Z]+"><br>
+	<input [(ngModel)]="miUsuario.pais" 		type="text"  id="pais" 		placeholder="País (*)"	    #pais="ngModel" required pattern="[a-zA-Z ]+"><br>
+	<input [(ngModel)]="miUsuario.ciudad" 		type="text"  id="ciudad" 	placeholder="Ciudad (*)" 	#ciudad="ngModel" required pattern="[a-zA-Z ]+"><br>
+	<input [(ngModel)]="miUsuario.direccion" 	type="text"  id="direccion" placeholder="Dirección"		#direccion="ngModel"><br>
+	<input [(ngModel)]="miUsuario.universidad" 	type="text"  id="universidad" 	placeholder="Universidad"	#universidad="ngModel"><br>
+	<input [(ngModel)]="miUsuario.titulo" 		type="text"  id="titulo" 		placeholder="Titulo (*)"	#titulo="ngModel" required pattern="[a-zA-Z ]+"><br>
+	<input [(ngModel)]="miUsuario.correo" 		type="email" id="correo" 	placeholder="Correo (*)"	#correo="ngModel" required pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"><br>
+	<input [(ngModel)]="miUsuario.celular" 		type="text"  id="celular" 	placeholder="Celular"		#celular="ngModel" pattern="[0-9]+"><br>
+	<input [(ngModel)]="miUsuario.telefono" 	type="text"  id="telefono" 	placeholder="Teléfono"		#telefono="ngModel" pattern="[0-9]+"><br>
 	<h5 class="letraPequena">(*) Los campos son obligatorios.</h5>
 
 
@@ -25,17 +23,24 @@
 	<h2 class="titulo">Resultado</h2>
 
 	<p class="color" id="parrafo">
-	Felicidades, los siguientes datos fueron almacenados en la base de datos: <br>
-
+		
 			<br> Nombre: <span class='res'>{{miUsuario.nombre}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="nombre.touched && !nombre.valid"> Campo requerido, sin espacios!</span>
 			<br> Apellido: <span class='res'>{{miUsuario.apellido}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="apellido.touched && !apellido.valid"> Campo requerido, sin espacios!</span>
 			<br> País: <span class='res'>{{miUsuario.pais}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="pais.touched && !pais.valid"> Campo requerido!</span>
 			<br> Ciudad: <span class='res'>{{miUsuario.ciudad}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="ciudad.touched && !ciudad.valid"> Campo requerido!</span>
 			<br> Dirección: <span class='res'>{{miUsuario.direccion}}</span>
-			<br> Empresa: <span class='res'>{{miUsuario.empresa}}</span>
-			<br> Cargo: <span class='res'>{{miUsuario.cargo}}</span>
+			<br> Universidad: <span class='res'>{{miUsuario.universidad}}</span>
+			<br> Titulo: <span class='res'>{{miUsuario.titulo}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="titulo.touched && !titulo.valid"> Campo requerido!</span>
 			<br> Correo: <span class='res'>{{miUsuario.correo}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="correo.touched && !correo.valid"> Ingrese un correo valido!</span>
 			<br> Celular: <span class='res'>{{miUsuario.celular}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="celular.touched && !celular.valid"> Solo numeros son permitidos!</span>
 			<br> Telefono: <span class='res'>{{miUsuario.telefono}}</span>
+			<span class="letraPequena" id="advertencia" *ngIf="telefono.touched && !telefono.valid"> Solo numeros son permitidos!</span>	
 	</p>
 	</div>

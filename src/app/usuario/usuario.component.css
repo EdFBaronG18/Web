@@ -80,3 +80,7 @@ input::placeholder {
 	color: #4B72F2;
 	margin: 5px 0px 0px 0px;
 }
+
+#advertencia {
+	color: red;
+}
