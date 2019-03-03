@@ -25,9 +25,9 @@
 	<p class="color" id="parrafo">
 		
 			<br> Nombre: <span class='res'>{{miUsuario.nombre}}</span>
-			<span class="letraPequena" id="advertencia" *ngIf="nombre.touched && !nombre.valid"> Campo requerido, sin espacios!</span>
+			<span class="letraPequena" id="advertencia" *ngIf="nombre.touched && !nombre.valid"> Campo requerido, sin caracteres especiales!</span>
 			<br> Apellido: <span class='res'>{{miUsuario.apellido}}</span>
-			<span class="letraPequena" id="advertencia" *ngIf="apellido.touched && !apellido.valid"> Campo requerido, sin espacios!</span>
+			<span class="letraPequena" id="advertencia" *ngIf="apellido.touched && !apellido.valid"> Campo requerido, sin caracteres especiales!</span>
 			<br> País: <span class='res'>{{miUsuario.pais}}</span>
 			<span class="letraPequena" id="advertencia" *ngIf="pais.touched && !pais.valid"> Campo requerido!</span>
 			<br> Ciudad: <span class='res'>{{miUsuario.ciudad}}</span>
@@ -35,7 +35,7 @@
 			<br> Dirección: <span class='res'>{{miUsuario.direccion}}</span>
 			<br> Universidad: <span class='res'>{{miUsuario.universidad}}</span>
 			<br> Titulo: <span class='res'>{{miUsuario.titulo}}</span>
-			<span class="letraPequena" id="advertencia" *ngIf="titulo.touched && !titulo.valid"> Campo requerido!</span>
+			<span class="letraPequena" id="advertencia" *ngIf="titulo.touched && !titulo.valid"> Campo requerido, sin caracteres especiales!</span>
 			<br> Correo: <span class='res'>{{miUsuario.correo}}</span>
 			<span class="letraPequena" id="advertencia" *ngIf="correo.touched && !correo.valid"> Ingrese un correo valido!</span>
 			<br> Celular: <span class='res'>{{miUsuario.celular}}</span>
