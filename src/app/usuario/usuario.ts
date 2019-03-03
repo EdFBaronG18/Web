@@ -10,4 +10,5 @@ export class Usuario {
     celular: String;
     telefono: String;
 
+    
 }
