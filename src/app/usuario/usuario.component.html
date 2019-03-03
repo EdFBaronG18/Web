@@ -1,0 +1,46 @@
+<div class="contenido">
+	<h2 class="titulo">{{titulo}}</h2>
+		
+	<input type="text" id="nombre" placeholder="Nombre (*)">
+	<br>
+	<input type="text" id="apellido" placeholder="Apellido (*)">
+	<br>
+	<input type="text" id="pais" placeholder="País (*)">
+	<br>
+	<input type="text" id="ciudad" placeholder="Ciudad (*)">
+	<br>
+	<input type="text" id="direccion" placeholder="Dirección">
+	<br>
+	<input type="text" id="empresa" placeholder="Empresa ">
+	<br>
+	<input type="text" id="cargo" placeholder="Cargo (*)">
+	<br>
+	<input type="email" id="correo" placeholder="Correo (*)">
+	<br>
+	<input type="text" id="celular" placeholder="Celular">
+	<br>
+	<input type="text" id="telefono" placeholder="Teléfono">
+	<br>
+	<h5 class="letraPequena">(*) Los campos son obligatorios.</h5>
+
+	<button class="btnEnviar" type="button">Enviar</button>
+	</div>
+
+	<div class="contenido2">
+	<h2 class="titulo">Resultado</h2>
+
+	<p class="color" id="parrafo">
+	Felicidades, los siguientes datos fueron almacenados en la base de datos: <br>
+
+			<br> Nombre: <span class='res'>{{miUsuario.nombre}}</span>
+			<br> Apellido: <span class='res'>{{miUsuario.apellido}}</span>
+			<br> País: <span class='res'>{{miUsuario.pais}}</span>
+			<br> Ciudad: <span class='res'>{{miUsuario.ciudad}}</span>
+			<br> Dirección: <span class='res'>{{miUsuario.direccion}}</span>
+			<br> Empresa: <span class='res'>{{miUsuario.empresa}}</span>
+			<br> Cargo: <span class='res'>{{miUsuario.cargo}}</span>
+			<br> Correo: <span class='res'>{{miUsuario.correo}}</span>
+			<br> Celular: <span class='res'>{{miUsuario.celular}}</span>
+			<br> Telefono: <span class='res'>{{miUsuario.telefono}}</span>
+	</p>
+	</div>
