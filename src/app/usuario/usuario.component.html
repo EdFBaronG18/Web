@@ -1,27 +1,22 @@
 <div class="contenido">
+
 	<h2 class="titulo">{{titulo}}</h2>
 		
-	<input type="text" id="nombre" placeholder="Nombre (*)">
+
+	<input [(ngModel)]="miUsuario.nombre" 		type="text"  id="nombre" 	placeholder="Nombre (*)"  #nombre="ngModel" required pattern="[a-zA-Z]+"/>
+	<span class="letraPequena" *ngIf="nombre.touched && !nombre.valid"> <br>El nombre es obligatorio.</span>
 	<br>
-	<input type="text" id="apellido" placeholder="Apellido (*)">
-	<br>
-	<input type="text" id="pais" placeholder="País (*)">
-	<br>
-	<input type="text" id="ciudad" placeholder="Ciudad (*)">
-	<br>
-	<input type="text" id="direccion" placeholder="Dirección">
-	<br>
-	<input type="text" id="empresa" placeholder="Empresa ">
-	<br>
-	<input type="text" id="cargo" placeholder="Cargo (*)">
-	<br>
-	<input type="email" id="correo" placeholder="Correo (*)">
-	<br>
-	<input type="text" id="celular" placeholder="Celular">
-	<br>
-	<input type="text" id="telefono" placeholder="Teléfono">
-	<br>
+	<input [(ngModel)]="miUsuario.apellido" 	type="text"  id="apellido" 	placeholder="Apellido (*)"><br>
+	<input [(ngModel)]="miUsuario.pais" 		type="text"  id="pais" 		placeholder="País (*)"><br>
+	<input [(ngModel)]="miUsuario.ciudad" 		type="text"  id="ciudad" 	placeholder="Ciudad (*)"><br>
+	<input [(ngModel)]="miUsuario.direccion" 	type="text"  id="direccion" placeholder="Dirección"><br>
+	<input [(ngModel)]="miUsuario.empresa" 		type="text"  id="empresa" 	placeholder="Empresa "><br>
+	<input [(ngModel)]="miUsuario.cargo" 		type="text"  id="cargo" 	placeholder="Cargo (*)"><br>
+	<input [(ngModel)]="miUsuario.correo" 		type="email" id="correo" 	placeholder="Correo (*)"><br>
+	<input [(ngModel)]="miUsuario.celular" 		type="text"  id="celular" 	placeholder="Celular"><br>
+	<input [(ngModel)]="miUsuario.telefono" 	type="text"  id="telefono" 	placeholder="Teléfono"><br>
 	<h5 class="letraPequena">(*) Los campos son obligatorios.</h5>
+
 
 	<button class="btnEnviar" type="button">Enviar</button>
 	</div>
